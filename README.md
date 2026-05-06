@@ -5,7 +5,7 @@
 
 ---
 
-## 📌 1. Tổng quan dự án (Introduction)
+## 1. Tổng quan dự án (Introduction)
 
 **Mục tiêu:** 
 Đánh giá hành vi mua sắm của khách hàng thương mại điện tử nhằm tối ưu hóa Giá trị vòng đời khách hàng (CLV) và chuyển dịch chiến lược từ tiếp thị đại trà sang cá nhân hóa trải nghiệm.
@@ -16,16 +16,16 @@
 
 ---
 
-## ⚙️ 2. Phương pháp thực hiện (Methodology)
+## 2. Phương pháp thực hiện (Methodology)
 
-### 🧹 2.1 Chuẩn bị & Tiền xử lý dữ liệu (Data Preparation)
+### 2.1 Chuẩn bị & Tiền xử lý dữ liệu (Data Preparation)
 *   **Làm sạch dữ liệu (24.049 bản ghi):** Xử lý giá trị khuyết thiếu bằng cách gán giá trị Trung vị (Median) cho các biến định lượng (Tuổi, Thời gian giao hàng, Điểm đánh giá) và Yếu vị (Mode) cho các biến định danh.
 *   **Loại bỏ dữ liệu nhiễu:** Xóa 1.935 bản ghi trùng lặp để ngăn ngừa hiện tượng thiên lệch (bias).
 *   **Xử lý ngoại lai (Outliers):** Áp dụng kỹ thuật Winsorization cho các biến biến động cao và biến đổi Logarit cho cột `Total_Amount` nhằm bảo toàn dữ liệu khách hàng VIP.
 *   **Chuẩn hóa & Mã hóa:** Dùng Min-Max Scaling để chuẩn hóa dữ liệu và One-Hot Encoding cho các biến định danh.
 *   **Giảm chiều dữ liệu (PCA):** Rút gọn từ 37 đặc trưng cốt lõi xuống còn 22 thành phần (bảo toàn 90% lượng thông tin).
 
-### 🔬 2.2 Quy trình phân tích (Analysis Workflow)
+### 2.2 Quy trình phân tích (Analysis Workflow)
 1.  **EDA (Phân tích khám phá):** Tìm ra quy luật phân phối, điểm bất thường và mối tương quan giữa các biến số hành vi và nhân khẩu học.
 2.  **Huấn luyện mô hình:** So sánh hiệu suất của hai mô hình học máy không giám sát: K-means (dựa trên khoảng cách) và DBSCAN (dựa trên mật độ).
 3.  **Đánh giá mô hình:** Dựa trên hệ số Silhouette, thuật toán **K-means với số lượng cụm tối ưu k=4** được chọn làm mô hình tốt nhất.
@@ -41,9 +41,9 @@
 
 ---
 
-## 📊 3. Kết quả & Insights (Findings & Insights)
+## 3. Kết quả & Insights (Findings & Insights)
 
-### 📈 Xu hướng Nhân khẩu học & Doanh thu
+### Xu hướng Nhân khẩu học & Doanh thu
 *   **Giới tính & Vị trí:** Khách hàng nữ chiếm tỷ trọng cao hơn. Thành phố Istanbul áp đảo hoàn toàn về mức độ tập trung khách hàng.
 *   **Doanh thu:** Danh mục **Electronics (Điện tử)** mang lại tổng doanh thu cao nhất, vượt xa các ngành hàng khác.
 *   **Tương quan hành vi:** Không có mối tương quan rõ rệt giữa thời gian trên trang web (Session Duration) và mức chi tiêu. Tuy nhiên, Đơn giá sản phẩm (Unit Price) có tương quan dương rất mạnh với tổng giá trị đơn hàng.
@@ -56,10 +56,10 @@ Dữ liệu được phân thành 4 nhóm khách hàng riêng biệt:
 
 | Cụm (Cluster) | Chân dung khách hàng | Đặc điểm hành vi | Tỷ trọng |
 | :--- | :--- | :--- | :--- |
-| **Cluster 0** | 🧑 Nam giới thông thường | Mua sắm dàn trải, số lượng mặt hàng ít, duy trì tương tác ổn định nhưng chỉ mua khi có nhu cầu cấp thiết. | 21.46% |
-| **Cluster 1** | 🤵 Nam giới VIP / Tiềm năng | Quan tâm mạnh đến đồ công nghệ, thể thao, sách. Có các giao dịch đột biến với giá trị cực lớn (~37.852). | 27.37% |
-| **Cluster 2** | 👩 Phụ nữ gia đình | Hành vi mua sắm đa dạng (Nhà cửa, Làm đẹp, Thực phẩm...). Tần suất ổn định, đóng vai trò quyết định chi tiêu sinh hoạt. | **28.72%** |
-| **Cluster 3** | 💃 Nữ giới thời trang & Trải nghiệm| Tập trung vào thời trang và làm đẹp. Mua sắm mang tính cảm xúc, ngẫu hứng cao, dễ bị ảnh hưởng bởi xu hướng MXH. | 22.46% |
+| **Cluster 0** | Nam giới thông thường | Mua sắm dàn trải, số lượng mặt hàng ít, duy trì tương tác ổn định nhưng chỉ mua khi có nhu cầu cấp thiết. | 21.46% |
+| **Cluster 1** | Nam giới VIP / Tiềm năng | Quan tâm mạnh đến đồ công nghệ, thể thao, sách. Có các giao dịch đột biến với giá trị cực lớn (~37.852). | 27.37% |
+| **Cluster 2** | Phụ nữ gia đình | Hành vi mua sắm đa dạng (Nhà cửa, Làm đẹp, Thực phẩm...). Tần suất ổn định, đóng vai trò quyết định chi tiêu sinh hoạt. | **28.72%** |
+| **Cluster 3** | Nữ giới thời trang & Trải nghiệm| Tập trung vào thời trang và làm đẹp. Mua sắm mang tính cảm xúc, ngẫu hứng cao, dễ bị ảnh hưởng bởi xu hướng MXH. | 22.46% |
 
 ![Biểu đồ phân bố Danh mục sản phẩm theo cụm](https://longchucute.id.vn/_next/image?url=https%3A%2F%2Fwww.notion.so%2Fimage%2Fattachment%253A2d306ab1-fee7-4c14-9a94-47754ca745ad%253Aimage.png%3Ftable%3Dblock%26id%3D357da7f3-5722-803a-bd35-de68fc04fc2e%26cache%3Dv2&w=3840&q=75)
 
