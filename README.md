@@ -30,7 +30,14 @@
 2.  **Huấn luyện mô hình:** So sánh hiệu suất của hai mô hình học máy không giám sát: K-means (dựa trên khoảng cách) và DBSCAN (dựa trên mật độ).
 3.  **Đánh giá mô hình:** Dựa trên hệ số Silhouette, thuật toán **K-means với số lượng cụm tối ưu k=4** được chọn làm mô hình tốt nhất.
 
-![Biểu đồ phương sai tích lũy](https://longchucute.id.vn/_next/image?url=https%3A%2F%2Fwww.notion.so%2Fimage%2Fattachment%253Aa1cbf585-cc68-493c-aba2-36e8544d4600%253Aimage.png%3Ftable%3Dblock%26id%3D357da7f3-5722-80b6-9508-fe5e71f955af%26cache%3Dv2&w=3840&q=75)
+
+
+![Biểu đồ phân phối theo độ tuổi của khách hàng](https://longchucute.id.vn/_next/image?url=https%3A%2F%2Fwww.notion.so%2Fimage%2Fattachment%253Aa1cbf585-cc68-493c-aba2-36e8544d4600%253Aimage.png%3Ftable%3Dblock%26id%3D357da7f3-5722-80b6-9508-fe5e71f955af%26cache%3Dv2&w=3840&q=75)
+![Biểu đồ thể hiện 10 thành phố hàng đầu theo khách hàng](https://longchucute.id.vn/_next/image?url=https%3A%2F%2Fwww.notion.so%2Fimage%2Fattachment%253A009d0a2b-1c7c-41dc-bdc1-e9fc39845d4f%253Aimage.png%3Ftable%3Dblock%26id%3D357da7f3-5722-802a-8ae0-e29c71ac3925%26cache%3Dv2&w=2048&q=75)
+![Biểu đồ phân phối theo giá trị đơn hàng](https://longchucute.id.vn/_next/image?url=https%3A%2F%2Fwww.notion.so%2Fimage%2Fattachment%253A1002c126-db6a-4412-8f68-c58227d5c324%253Aimage.png%3Ftable%3Dblock%26id%3D357da7f3-5722-80b4-b28d-d615c6a9c594%26cache%3Dv2&w=3840&q=75)
+![Biểu đồ thể hiện tổng doanh thu theo danh mục sản phẩm](https://longchucute.id.vn/_next/image?url=https%3A%2F%2Fwww.notion.so%2Fimage%2Fattachment%253A4392457c-302d-490f-9179-387e1dbf2453%253Aimage.png%3Ftable%3Dblock%26id%3D357da7f3-5722-80b8-ac96-d3c922a37e2d%26cache%3Dv2&w=1920&q=75)
+![Biểu đồ phân phối thời gian cho trang web](https://longchucute.id.vn/_next/image?url=https%3A%2F%2Fwww.notion.so%2Fimage%2Fattachment%253Ad3fabb31-e4b0-404d-a578-ab96fcf1c57a%253Aimage.png%3Ftable%3Dblock%26id%3D357da7f3-5722-8022-bc5c-f5a4cd529a02%26cache%3Dv2&w=2048&q=75)
+![Biểu đồ phương sai tích lũy](https://longchucute.id.vn/_next/image?url=https%3A%2F%2Fwww.notion.so%2Fimage%2Fattachment%253Afee7c3e6-5d0f-4570-bb36-9b3248941804%253Aimage.png%3Ftable%3Dblock%26id%3D357da7f3-5722-8051-9428-d56f76b58cd1%26cache%3Dv2&w=3840&q=75)
 
 ---
 
@@ -41,7 +48,7 @@
 *   **Doanh thu:** Danh mục **Electronics (Điện tử)** mang lại tổng doanh thu cao nhất, vượt xa các ngành hàng khác.
 *   **Tương quan hành vi:** Không có mối tương quan rõ rệt giữa thời gian trên trang web (Session Duration) và mức chi tiêu. Tuy nhiên, Đơn giá sản phẩm (Unit Price) có tương quan dương rất mạnh với tổng giá trị đơn hàng.
 
-![Biểu đồ nhiệt tương quan giữa các biến số](Link_ảnh_Correlation_Heatmap)
+![Biểu đồ nhiệt tương quan giữa các biến số](https://longchucute.id.vn/_next/image?url=https%3A%2F%2Fwww.notion.so%2Fimage%2Fattachment%253Aca04cc2e-9fbf-4fd6-aab1-66b4e5049b3f%253Aimage.png%3Ftable%3Dblock%26id%3D357da7f3-5722-80e1-816d-c0ba6603955a%26cache%3Dv2&w=3840&q=75)
 
 ### 👥 Phân cụm khách hàng (K-means Clustering)
 
@@ -54,9 +61,7 @@ Dữ liệu được phân thành 4 nhóm khách hàng riêng biệt:
 | **Cluster 2** | 👩 Phụ nữ gia đình | Hành vi mua sắm đa dạng (Nhà cửa, Làm đẹp, Thực phẩm...). Tần suất ổn định, đóng vai trò quyết định chi tiêu sinh hoạt. | **28.72%** |
 | **Cluster 3** | 💃 Nữ giới thời trang & Trải nghiệm| Tập trung vào thời trang và làm đẹp. Mua sắm mang tính cảm xúc, ngẫu hứng cao, dễ bị ảnh hưởng bởi xu hướng MXH. | 22.46% |
 
-> *Ghi chú: Bạn có thể tham khảo chi tiết các biểu đồ phân bố độ tuổi, top thành phố, và danh mục sản phẩm theo cụm trong [báo cáo chi tiết trên Kaggle](https://www.kaggle.com/datasets/umuttuygurr/e-commerce-customer-behavior-and-sales-analysis-tr).*
-
-![Biểu đồ phân bố Danh mục sản phẩm theo cụm](Link_ảnh_Danh_mục_sản_phẩm_theo_cụm)
+![Biểu đồ phân bố Danh mục sản phẩm theo cụm](https://longchucute.id.vn/_next/image?url=https%3A%2F%2Fwww.notion.so%2Fimage%2Fattachment%253A2d306ab1-fee7-4c14-9a94-47754ca745ad%253Aimage.png%3Ftable%3Dblock%26id%3D357da7f3-5722-803a-bd35-de68fc04fc2e%26cache%3Dv2&w=3840&q=75)
 
 ---
 
