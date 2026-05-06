@@ -50,7 +50,7 @@
 
 ![Biểu đồ nhiệt tương quan giữa các biến số](https://longchucute.id.vn/_next/image?url=https%3A%2F%2Fwww.notion.so%2Fimage%2Fattachment%253Aca04cc2e-9fbf-4fd6-aab1-66b4e5049b3f%253Aimage.png%3Ftable%3Dblock%26id%3D357da7f3-5722-80e1-816d-c0ba6603955a%26cache%3Dv2&w=3840&q=75)
 
-### 👥 Phân cụm khách hàng (K-means Clustering)
+### Phân cụm khách hàng (K-means Clustering)
 
 Dữ liệu được phân thành 4 nhóm khách hàng riêng biệt:
 
@@ -65,7 +65,7 @@ Dữ liệu được phân thành 4 nhóm khách hàng riêng biệt:
 
 ---
 
-## 💡 4. Đề xuất chiến lược (Recommendations)
+## 4. Đề xuất chiến lược (Recommendations)
 
 Các đề xuất được tinh chỉnh riêng biệt nhằm tối ưu hóa hoạt động của từng phòng ban:
 
